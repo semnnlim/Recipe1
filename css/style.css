@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+}
+p{
+    font-family: 'Arial', serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 10px 10px;
+}
+li {
+    font-family: 'Arial', serif;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    font-family: 'Arial', monospace;
+}
+h1, h2 {
+    font-family: 'Arial', monospace;
+    margin: 0;
+    padding: 10px 10px 0px 10px;
+}
+.highlight {
+    background-color: white;
+    color: black;
+}
+
+/* Header
+---------------------------*/
+header img {
+    padding: 0;
+}
+header {
+    color: rgb(0, 0, 0);
+}
+header li, nav li {
+    list-style: none;
+    color:black;
+}
+header li:not(:last-child), nav li:not(:last-child) {
+    margin-bottom: 10px;
+    color: black;
+
+}
+header ul {
+    margin: 0;
+    padding: 10px 10px;
+    color:black;
+    float: left;
+}
+
+/* Navigation
+---------------------------*/
+nav {
+    background-color: rgb(175, 115, 177);
+    padding: 20px 0px;
+}
+nav a {
+    color: rgb(0, 0, 0);
+    font-family: 'Arial', monospace;
+}
+nav ul {
+    margin: 0;
+    padding: 10px 10px;
+}
+
+/* Sections
+---------------------------*/
+section ul {
+    margin: 0;
+    padding: 10px 30px;
+}
+section li:not(:last-child) {
+    margin-bottom: 10px;
+}
+ol img {
+    padding: 20px 0;
+}
+
+content {
+    background-color: white;
+    float: left;
+}
+
+.content{
+    background-color: rgb(255, 255, 255);
+    left:40px;
+}
+#content{
+    float: left;
+}
+
+.sidebar{
+    background-color: blueviolet;
+    float: right;
+}
+
+#sidebar {
+    float: right;
+}
+
+. 
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 960px) {
+    h1 {
+        padding-top: 20px;
+    }
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+    }
+    header li:before {
+        display: none;
+    }
+    header li {
+        color: rgb(0, 0, 0);
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li:before {
+        display: none;
+    }
+    nav a {
+        color: rgb(0, 0, 0);
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        float: right;
+	    grid-template-areas: "sidebar navigation" 
+                             "sidebar story"
+                             "sidebar content";
+    }
+    nav {
+        background-color:rgb(241, 220, 255);
+        color: black;
+        grid-area: navigation;
+    }
+    .sidebar {
+        background-color: rgb(241, 220, 255);
+        grid-area: sidebar;
+        line-height: 80px;
+    }
+    #story {
+        grid-area: story;
+        padding-top: 20px;
+    }
+    .content {
+        grid-area: content;
+        padding-top: 20px;
+    }
+    #story span, .content span {
+       background-color: white;
+       color: black;
+    }
+    .sidebar span {
+        background-color:rgb(237, 212, 255);
+        color: black;
+     }
+    .sidebar li:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
